@@ -10,10 +10,19 @@
 
 ## Getting started
 
+[Electron app with Webpack, Bootstrap, FontAwesome and JQuery - A complete guide](https://dev.to/theola/electron-app-with-webpack-bootstrap-fontawesome-and-jquery-a-complete-guide-54k2)
+
+[Repo](https://github.com/theolazian/electron-webpack-bootstrap-fontawesome-jquery/)
+
+```
+npm install --global yarn
+yarn create electron-app electron-kiosk --template=webpack
+```
+
 ### Start app
 
 ```
-npm start
+yarn start
 ```
 
 ### Building distributables
@@ -23,10 +32,12 @@ arm64 linux와 크로스 빌드하기 위해서는 `packages.json`과 `forge.con
 make 명령은 exe 설치파일 또는 rpm, deb까지 만들고 package 명령은 단순하게 파일 빌드만 한다.
 
 ```
-npm run make
+yarn run make
 
 # arm linux (no exe)
-npm run package -- --arch arm64 --platform linux
+yarn run package -- --arch arm64 --platform linux
+
+yarn run package:pi
 ```
 
 ### Publishing
@@ -34,5 +45,5 @@ npm run package -- --arch arm64 --platform linux
 publish는 특정 사이트로 업로드한다.
 
 ```
-npm run publish
+yarn run publish
 ```
